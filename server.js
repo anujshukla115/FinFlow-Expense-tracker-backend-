@@ -17,12 +17,11 @@ const app = express();
    MIDDLEWARE
 ===================== */
 app.use(cors({
-    origin: [
-        'http://localhost:3000',
-        'http://127.0.0.1:5500',
-        'http://localhost:5500'
-    ],
-    credentials: true
+  origin: [
+    'http://localhost:5500',
+    'https://finflow-expense-tracker.netlify.app'
+  ],
+  credentials: true
 }));
 
 app.use(express.json());
@@ -96,3 +95,4 @@ mongoose
     });
 
 module.exports = app;
+
